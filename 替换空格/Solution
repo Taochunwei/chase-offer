@@ -1,0 +1,7 @@
+public class Solution {
+    public String replaceSpace(StringBuffer str) {
+        String tem=new String(str);
+        String res=tem.replaceAll(" ","%20");
+        return res;
+    }
+}
