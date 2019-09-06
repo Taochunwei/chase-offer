@@ -1,0 +1,24 @@
+public class Solution {
+    public int cutRope(int target) {
+        if(target<2)
+            return 0;
+        if(target==2)
+            return 1;
+        if(target==3)
+            return 2;
+        int timeOf3=target/3;
+        if((target-timeOf3*3)==1){
+            timeOf3=timeOf3-1;
+            return (int)Math.pow(3,timeOf3)*4;
+        }else if(target%3==0){
+            return (int)Math.pow(3,timeOf3);
+        }else {
+            return (int)Math.pow(3,timeOf3)*2;
+        }
+    }
+
+    public static void main(String[] args) {
+        Solution s=new Solution();
+        System.out.println(s.cutRope(8));
+    }
+}
