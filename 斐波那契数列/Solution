@@ -1,0 +1,15 @@
+public class Solution {
+    public int Fibonacci(int n) {
+        if(n<2)
+            return n;
+        int Fiboclose=1;
+        int Fibofar=0;
+        int FiboN=0;
+        for(int i=2;i<=n;i++){
+            FiboN=Fiboclose+Fibofar;
+            Fibofar=Fiboclose;
+            Fiboclose=FiboN;
+        }
+        return FiboN;
+    }
+}
